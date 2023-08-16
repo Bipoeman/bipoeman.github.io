@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Markdown Rendering Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked@2.0.3/marked.min.js"></script>
+</head>
+
+<body>
+
+    <div id="markdown-container"></div>
+
+    <script>
+        // Markdown content
+        const markdownText = `
+    # Heading 1
+    This is **bold** and *italic* text.
+
+    - List item 1
+    - List item 2
+    - List item 3
+  `;
+
+        // Convert Markdown to HTML using marked
+        const html = marked(markdownText);
+
+        // Insert the rendered HTML into the container
+        document.getElementById('markdown-container').innerHTML = html;
+    </script>
+
+</body>
+
+</html>
